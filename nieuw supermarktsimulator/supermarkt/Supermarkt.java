@@ -5,17 +5,12 @@
  */
 package supermarkt;
 
+import controllers.Controller;
+
 /**
  *
  * @author robert
  */
 public class Supermarkt {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
 }

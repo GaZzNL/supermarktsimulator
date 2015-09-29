@@ -28,9 +28,9 @@ public class SupermarktField {
     
     public void placeObject(int row,int col, Object item)
     {
-        if(field[row][col] == null)
+        if(field[row][col] == null);
     }
-    private void placeObject()
+    //private void placeObject()
     
 
 }

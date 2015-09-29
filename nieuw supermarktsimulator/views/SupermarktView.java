@@ -1,14 +1,25 @@
 package views;
 
-import actors.FieldStats;
-import interfaces.ActionListener;
-import java.awt.EventQueue;
+import java.util.List;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
+import models.Location;
 
-public class SupermarktView extends JFrame implements ActionListener {
+public class SupermarktView extends JFrame /*implements ActionListener*/ {
+    
+    private List<Location> locations;
+    
+    public SupermarktView()
+    {
+        this.locations = new ArrayList<>();
+                
+    }
 
-	private FieldStats fieldStats;
+
+
+
+	/*private FieldStats fieldStats;
 
 	private FieldView fieldView;
         
@@ -18,6 +29,7 @@ public class SupermarktView extends JFrame implements ActionListener {
          * Class die straks de waardes update
          * @param args 
          */
+    /*
         public static void main(String[] args)
         {
             EventQueue.invokeLater(() -> {
@@ -31,7 +43,7 @@ public class SupermarktView extends JFrame implements ActionListener {
                 }
             });
         }
-        
+        /*
         public SupermarktView()
         {
             initialize();
@@ -42,5 +54,5 @@ public class SupermarktView extends JFrame implements ActionListener {
             frame = new JFrame();
             frame.setBounds(100, 100, 450, 300);
             frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        }
+        }*/
 }

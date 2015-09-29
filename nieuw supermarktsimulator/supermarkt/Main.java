@@ -18,8 +18,9 @@ public class Main {
         Controller controller = new Controller();
         
         new Thread(new Runnable(){
-            Supermarkt supermarkt = new Supermarkt();
-            
+            public void run() {
+                Supermarkt supermarkt = new Supermarkt();
+            }
         }).start();
     }
     

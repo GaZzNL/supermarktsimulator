@@ -1,7 +1,11 @@
 package models;
 
-public class VoordeelStraat {
+import superInterfaces.ICustomerInteractable;
+import superInterfaces.IWorkable;
 
-	private Artikelen artikelen;
+public class VoordeelStraat extends Afdeling{
 
+    public VoordeelStraat(){
+    
+    }
 }

@@ -9,9 +9,9 @@ import actors.Klant;
 import actors.Personeel;
 import java.util.ArrayList;
 import java.util.List;
-import superInterfaces.ICountable;
-import superInterfaces.ICustomerInteractable;
-import superInterfaces.IWorkable;
+import interfaces.ICountable;
+import interfaces.ICustomerInteractable;
+import interfaces.IWorkable;
 
 /**
  *

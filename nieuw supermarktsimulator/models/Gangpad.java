@@ -1,10 +1,10 @@
 package models;
 
-
-import models.Afdelingen;
+import java.util.List;
 
 public class Gangpad {
 
-	private Afdelingen afdelingen;
+	private List<Afdelingen> afdelingen;
+        
 
 }

@@ -4,7 +4,7 @@ package models;
 import actors.Klant;
 import java.util.ArrayList;
 import java.util.List;
-import superInterfaces.ICustomerInteractable;
+import interfaces.ICustomerInteractable;
 
 public class KassaRij implements ICustomerInteractable{
     

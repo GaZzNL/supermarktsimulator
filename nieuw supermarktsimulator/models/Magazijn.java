@@ -9,8 +9,8 @@ import actors.Personeel;
 import java.util.ArrayList;
 import java.util.List;
 import models.Magazijn.ArticleInStorage;
-import superInterfaces.ICountable;
-import superInterfaces.IWorkable;
+import interfaces.ICountable;
+import interfaces.IWorkable;
 
 /**
  *

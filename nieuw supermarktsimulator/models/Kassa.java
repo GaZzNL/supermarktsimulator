@@ -1,24 +1,28 @@
 package models;
 
 import actors.Personeel;
-import java.util.List;
-import superInterfaces.IWorkable;
 
-public class Kassa implements IWorkable {
-
-    @Override
-    public void addPersoneel(Personeel personeel) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+public class Kassa{
+    private Personeel personeel;
+    private Boolean inUse;
+    
+     public Kassa(){ 
+    }
+     
+    public Personeel getPersoneel() {
+        return personeel;
     }
 
-    @Override
-    public void removePersoneel(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setPersoneel(Personeel personeel) {
+        this.personeel = personeel;
+        if(personeel == null)
+            inUse = false;
+        else
+            inUse = true;
     }
 
-    @Override
-    public List<Personeel> getPersoneel() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Boolean getInUse() {
+        return inUse;
     }
 
 }

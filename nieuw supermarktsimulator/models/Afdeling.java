@@ -18,18 +18,24 @@ import interfaces.IWorkable;
  * @author J
  */
 public class Afdeling implements IWorkable,ICustomerInteractable{
-    private List<ArticleInTransit> artikelen;
+    private final int id;
+    private List<ArticleOnDisplay> artikelen; 
     private List<Personeel> personeel;
     private List<Klant> klanten;
     
-    public Afdeling(){
-        artikelen = new ArrayList<ArticleInTransit>();
+    public Afdeling(int id){
+        this.id = id;
+        artikelen = new ArrayList<ArticleOnDisplay>();
         personeel =  new ArrayList<Personeel>();
         klanten = new ArrayList<Klant>();
     }
     
+    public int getId() {
+        return id;
+    }
+    
     public void addArticle(Artikel art, int quantity){
-        this.artikelen.add(new ArticleInTransit(art, quantity));
+        this.artikelen.add(new ArticleOnDisplay(art, quantity));
     }
     
     public void removeArticle(int id){
@@ -64,12 +70,8 @@ public class Afdeling implements IWorkable,ICustomerInteractable{
         return klanten;
     } 
     
-    public void addNewArticleToStorage(Artikel article, int quantity){
-        artikelen.add(new ArticleInTransit(article, quantity));
-    }
-    
     public int getArticleQuantity(Artikel article){
-        for(ArticleInTransit a : artikelen){
+        for(ArticleOnDisplay a : artikelen){
             if(a.getArticle() == article){
                 return a.getQuantity();
             }
@@ -78,7 +80,7 @@ public class Afdeling implements IWorkable,ICustomerInteractable{
     }
     
     public void increaseArticleByX(Artikel article, int increment){
-        for(ArticleInTransit a : artikelen){
+        for(ArticleOnDisplay a : artikelen){
             if(a.getArticle() == article){
                 a.setQuantity(increment);
                 break;//no need to loop further
@@ -86,11 +88,11 @@ public class Afdeling implements IWorkable,ICustomerInteractable{
         }
     }
 
-    class ArticleInTransit implements ICountable{//nested klassen uitproberen
+    class ArticleOnDisplay implements ICountable{//nested klassen uitproberen
         private final Artikel article;
         private int quantity = 0;
 
-        public ArticleInTransit(Artikel a, int quantity) {
+        public ArticleOnDisplay(Artikel a, int quantity) {
             this.article = a;
             this.quantity = quantity;
         }

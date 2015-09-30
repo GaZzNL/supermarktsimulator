@@ -10,14 +10,20 @@ package models;
  * @author J
  */
 public class Artikel {
+    private final int artikelId;//saved for ease of use.
     private final String name;
     private final String type;
     private Double price;
 
-    public Artikel(String name, Double price, String type){
+    public Artikel(int artikelId, String name, Double price, String type){
+        this.artikelId =  artikelId;
         this.name = name;
         this.price = price;
         this.type = type;
+    }
+    
+    public int getArtikelId() {
+        return artikelId;
     }
     
     public Double getPrice() {

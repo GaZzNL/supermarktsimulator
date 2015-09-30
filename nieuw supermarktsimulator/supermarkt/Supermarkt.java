@@ -5,21 +5,48 @@
  */
 package supermarkt;
 
-import controllers.Controller;
 import database.DatabaseController;
+import java.util.Observable;
+import models.Location;
 
 /**
  *
  * @author robert
  */
-public class Supermarkt {
+
+public class Supermarkt extends Observable{
     
-    public Supermarkt(){
-        testDatabase();
+    private Location location;
+    
+    private DatabaseController database;
+    
+    private boolean run;
+    
+    
+    public Supermarkt(Location layout)
+    {
+        this.location = layout;
+        
+        this.database = new DatabaseController();
+        
+        
+        this.run = false;
+        //connectDatabase();
     }
     
-    public void testDatabase(){
-       Boolean test =  DatabaseController.ConnectToDB();
-       DatabaseController.isConnected();
+    private void connectDatabase(){
+       //database =  DatabaseController.ConnectToDB();
+       //DatabaseController.isConnected();
+    }
+    
+    void run()
+    {
+        this.run = true;
+        while(run)
+        {
+            //Update de observable
+            setChanged();
+            //Hier moet de tick methodes komen
+        }
     }
 }

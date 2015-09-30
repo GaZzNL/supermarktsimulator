@@ -6,12 +6,16 @@
 package supermarkt;
 
 import controllers.Controller;
+import models.Location;
 
 /**
  *
  * @author robert
  */
 public class Main {
+    
+    //Maak de layout voor de supermarkt
+    private static Location layout = Location.CreateLayout();
     
     public static void main(String[] args) {
         
@@ -20,6 +24,8 @@ public class Main {
         new Thread(new Runnable(){
             public void run() {
                 Supermarkt supermarkt = new Supermarkt();
+                controller.setModel(supermarkt);
+                supermarkt.run();
             }
         }).start();
     }

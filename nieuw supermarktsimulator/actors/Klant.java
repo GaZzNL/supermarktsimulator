@@ -6,22 +6,21 @@ import java.util.List;
 import models.Artikel;
         
 public class Klant extends Persoon implements Betaalwijze{
-
+ 
+        private final String klantType;
 	private WinkelMand winkelMand;
-
 	private Betaalwijze betaalwijze;
-
-	//private WinkelMand winkelMand;
-
-	private Personeel personeel;
-        
         private List<Artikel> boodschappenlijst;
         
-        public Klant(){
+        public Klant(String klantType){
+            this.klantType = klantType;
             winkelMand = new WinkelMand();
             boodschappenlijst = new ArrayList<Artikel>();
         }
         
+        public String getKlantType() {
+            return klantType;
+        }
         public WinkelMand getWinkelMand() {
             return winkelMand;
         }
@@ -36,14 +35,6 @@ public class Klant extends Persoon implements Betaalwijze{
 
         public void setBetaalwijze(Betaalwijze betaalwijze) {
             this.betaalwijze = betaalwijze;
-        }
-
-        public Personeel getPersoneel() {
-            return personeel;
-        }
-
-        public void setPersoneel(Personeel personeel) {
-            this.personeel = personeel;
         }
 
         public List<Artikel> getBoodschappenlijst() {

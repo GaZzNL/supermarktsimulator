@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package database;
+package controllers;
 
 import models.Magazijn;
 import java.sql.ResultSet;
@@ -92,7 +92,6 @@ public class DBResultToObjectConverter {
             return null;
         }     
         return magazijn;
-        
     }
     
 }

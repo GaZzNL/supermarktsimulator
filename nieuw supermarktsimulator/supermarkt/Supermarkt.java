@@ -5,7 +5,7 @@
  */
 package supermarkt;
 
-import database.DatabaseController;
+import controllers.DatabaseController;
 import java.util.Observable;
 import models.Location;
 
